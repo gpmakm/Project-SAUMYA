@@ -1,0 +1,136 @@
+
+
+body{
+  background: url('/public/CollegePic.jpg');
+  background-size: cover;
+  
+}
+form{
+  width: 50vw;
+  height: auto;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid violet;
+  border-radius: 35px;
+  background-color: black;
+  opacity: 0.7;
+  
+  justify-self: center;
+}
+form .field{
+  width: 49.5vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+ 
+}
+.paragraph{
+  width: 50vw;
+  height: auto;
+  padding: 7px;
+  font-style: italic;
+  font-size: large;
+  border-radius: 35px 5px 35px 5px;
+  border: 1px solid grey;
+  transform: translate(0vw,0vh);
+  animation: slide 2s  1 alternate-reverse ease-in-out;
+  color: black;
+  background-color: rgb(236, 236, 84);
+}
+#heading{
+  width: auto;
+  padding: 4px;
+  animation: rlSlide 2s  1 reverse ease-in;
+  transform: translate(0vw,3vh);
+  color: darkred;
+
+}
+@keyframes rlSlide {
+  100%{
+    transform: translate(0vw,-15vh);
+  }
+}
+@keyframes slide {
+  100%{
+    transform: translate(-50vw,0vh);
+  }
+}
+#projectName{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50%;
+  margin: 7px;
+  padding: 8px;
+  color: black;
+  
+  &:hover{
+    cursor: pointer;
+    
+  }
+}
+#imageset{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 7px;
+}
+img{
+  margin: 5px;
+  border-radius: 35px 5px 35px 5px;
+  
+  &:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: transform 1s;
+  }
+}
+#collegelogo{
+  border-radius: 35px;
+  margin-left: -20px;
+margin-right: 3vw;
+}
+ul{
+  display: flex;
+  
+}
+li{
+  list-style-type: none;
+  margin: 5px;
+  padding: 5px;
+}
+a{
+  color: white;
+  padding: 5px;
+  &:hover{
+    color: yellow;
+    border: 1px solid white;
+  }
+}
+nav{
+  background-color: blueviolet;
+  color: white;
+  width: 100vw;
+ padding: 5px;
+}
+.activeBar{
+ background-color: pink;
+ color: blueviolet;
+ &:hover{
+  color: blueviolet;
+ }
+}
+@media screen and (max-width:600px) {
+  form{
+    width: 80vw;
+    height: auto;
+    padding: 7px;
+  }
+  form .field{
+    width: 70vw;
+  }
+  nav{
+    width: 100vw;
+    height: 7vh;
+  }
+}

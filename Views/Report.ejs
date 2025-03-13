@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance report</title>
+</head>
+<body>
+    
+    <button onclick="printData()">Print the info</button>
+    <table border="2px solid black">
+        <tr>
+
+            <th>Registration Number</th>
+            <th>Student name</th>
+            <th>Exam roll number</th>
+        </tr>
+       
+            
+        <% report.forEach(function (element){ %>
+                <tr>
+                    <td><%=element.regno%></td>
+                    <td><%=element.student_name%></td>
+                    <td><%=element.roll%></td>
+                </tr>
+           <% }); %>
+            
+        
+    </table>
+</body>
+<script>
+    const printData=()=>{
+    window.print();
+    }
+</script>
+</html>
